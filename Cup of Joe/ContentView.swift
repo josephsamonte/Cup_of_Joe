@@ -13,7 +13,7 @@ struct ContentView: View {
     @State private var waterRatio: Double = 15
     @State private var waterAmount: Double = 0
     
-    let ratioOptions = ["Strong 🌋", "Medium 🏔", "Weak 🏖"]
+    let ratioOptions = ["Strong", "Medium", "Weak"]
     
     var body: some View {
         NavigationView {
@@ -39,7 +39,6 @@ struct ContentView: View {
                 }
             }
             .navigationBarTitle("Pour Over Ratio")
-            .background(Color("LightBrown"))
         }
         .onChange(of: coffeeAmount) { newValue in
             calculateWaterAmount()
